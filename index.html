@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operating Systems | Jonel's Complete OS Installation Guides</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <nav class="nav-container">
+      <a href="#home" class="logo" data-page="home">Operating Systems</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#home" data-page="home">Home</a></li>
+        <li><a href="#about" data-page="about">About Me</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-trigger">OS Installations</a>
+          <ul class="dropdown-menu dropdown-menu-wide">
+            <li><a href="#os-win95" data-page="os" data-id="win95">Win 95</a></li>
+            <li><a href="#os-win98" data-page="os" data-id="win98">Win 98</a></li>
+            <li><a href="#os-2000" data-page="os" data-id="2000">2000</a></li>
+            <li><a href="#os-me" data-page="os" data-id="me">ME</a></li>
+            <li><a href="#os-nt" data-page="os" data-id="nt">NT</a></li>
+            <li><a href="#os-vista" data-page="os" data-id="vista">VISTA</a></li>
+            <li><a href="#os-xp" data-page="os" data-id="xp">XP</a></li>
+            <li><a href="#os-server2003" data-page="os" data-id="server2003">SERVER 2003</a></li>
+            <li><a href="#os-server2008" data-page="os" data-id="server2008">SERVER 2008</a></li>
+            <li><a href="#os-win7" data-page="os" data-id="win7">WIN 7</a></li>
+            <li><a href="#os-win8" data-page="os" data-id="win8">WIN 8</a></li>
+            <li><a href="#os-win10" data-page="os" data-id="win10">WIN 10</a></li>
+            <li><a href="#os-win11" data-page="os" data-id="win11">WIN 11</a></li>
+            <li><a href="#os-server2012" data-page="os" data-id="server2012">SERVER 2012</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-trigger">Activities</a>
+          <ul class="dropdown-menu">
+            <li><a href="#cs-adding-users" data-page="cs" data-id="adding-users">Adding Users</a></li>
+            <li><a href="#cs-dhcp" data-page="cs" data-id="dhcp">DHCP Roles and Domain</a></li>
+            <li><a href="#cs-raid" data-page="cs" data-id="raid">RAID Installations</a></li>
+            <li><a href="#cs-app-web" data-page="cs" data-id="app-web">Application and Web Server</a></li>
+            <li><a href="#cs-file-server" data-page="cs" data-id="file-server">File Server</a></li>
+            <li><a href="#cs-group-policy" data-page="cs" data-id="group-policy">Group Policy Management</a></li>
+            <li><a href="#cs-wds" data-page="cs" data-id="wds">Windows Deployment Services</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Page: Home (Hero) -->
+    <section id="page-home" class="page page-active">
+      <div class="hero">
+        <div class="hero-bg">
+          <div class="gradient-blob blob-1"></div>
+          <div class="gradient-blob blob-2"></div>
+          <div class="gradient-blob blob-3"></div>
+        </div>
+        <div class="hero-content">
+          <h1>Jonel's Complete OS Installation Guides</h1>
+          <p class="hero-subheading">Step-by-step tutorials, activities, and YouTube guides for operating system installations and server network setups.</p>
+          <a href="#os-win10" class="cta-button" data-page="os" data-id="win10">Start Learning</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page: About Me -->
+    <section id="page-about" class="page">
+      <div class="about-section">
+        <div class="about-bg">
+          <div class="gradient-blob blob-1"></div>
+          <div class="gradient-blob blob-2"></div>
+        </div>
+        <div class="container">
+          <div class="about-panel">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+              <p>Hello! I'm Jonel A. Caisip, a 2nd-year BSIT student at the Technological University of the Philippines - Taguig (TUP-T). I am a proud DOST and LANI scholar, and I currently serve in the University Student Government - Taguig.</p>
+              <p>I created this website to store my YouTube videos and share my knowledge about operating system installations. Beyond OS management, my tech journey involves web development using Laravel and PHP, PC building, and tinkering with Arduino and ESP32 microcontrollers for hardware projects. This site serves as both a learning resource for others and a portfolio of my technical abilities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page: OS Installation Template -->
+    <section id="page-os" class="page">
+      <div class="content-section tutorial-section">
+        <div class="container">
+          <h2 id="os-title" class="section-title">Windows 10 Installation</h2>
+          <p id="os-description" class="tutorial-description">Follow along with this comprehensive guide to install Windows 10 on your system.</p>
+          <div class="video-container">
+            <h3 class="video-title">Video Tutorial</h3>
+            <div class="video-wrapper">
+              <iframe id="os-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+          </div>
+          <div class="steps-section">
+            <h3>Installation Steps</h3>
+            <ol id="os-steps" class="steps-list">
+              <li>Create a bootable USB drive using Microsoft's Media Creation Tool or Rufus.</li>
+              <li>Enter your computer's BIOS/UEFI and set the USB drive as the primary boot device.</li>
+              <li>Restart your computer and follow the Windows setup wizard prompts.</li>
+              <li>Select your language, time zone, and keyboard layout.</li>
+              <li>Click "Install now" and enter your product key (or choose "I don't have a product key").</li>
+              <li>Select the edition of Windows 10 you want to install.</li>
+              <li>Accept the license terms and choose "Custom: Install Windows only (advanced)".</li>
+              <li>Select the drive/partition for installation and proceed with the setup.</li>
+              <li>Wait for the installation to complete; your computer will restart several times.</li>
+              <li>Complete the out-of-box experience (OOBE) setup for your account and preferences.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page: Activity Template -->
+    <section id="page-cs" class="page">
+      <div class="content-section activity-section">
+        <div class="container">
+          <h2 id="cs-title" class="section-title">DHCP Roles and Domain</h2>
+          <div id="cs-description-block" class="activity-description">
+            <p>This activity covers configuring DHCP (Dynamic Host Configuration Protocol) roles within a Windows Server 2008 environment and integrating with Active Directory Domain Services. You will learn how to install the DHCP server role, authorize the server in the domain, create scopes, and configure options for automatic IP address allocation to clients on your network.</p>
+          </div>
+          <div class="video-container">
+            <h3 class="video-title">Video Tutorial</h3>
+            <div class="video-wrapper">
+              <iframe id="cs-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+          </div>
+          <div class="steps-section">
+            <h3>Step-by-Step Process</h3>
+            <ol id="cs-steps" class="steps-list">
+              <li>Open Server Manager and add the DHCP Server role from the Add Roles Wizard.</li>
+              <li>Authorize the DHCP server in Active Directory (if joined to a domain).</li>
+              <li>Create a new IPv4 scope with the desired IP range and subnet mask.</li>
+              <li>Configure scope options (default gateway, DNS servers, WINS if needed).</li>
+              <li>Activate the scope and verify DHCP server operation.</li>
+              <li>Test from a client by setting network adapter to obtain IP automatically.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2026 Jonel A. Caisip. Complete guides for OS installations.</p>
+    </div>
+  </footer>
+
+  <script src="content-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
