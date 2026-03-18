@@ -48,6 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
       loadOSContent(contentId);
     } else if (pageId === 'cs' && contentId && typeof ACTIVITIES_CONTENT !== 'undefined') {
       loadActivityContent(contentId);
+    } else if (pageId === 'casestudy' && contentId && typeof CASESTUDY_CONTENT !== 'undefined') {
+      loadCaseStudyContent(contentId);
     }
   }
 
@@ -81,6 +83,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  function loadCaseStudyContent(id) {
+    const data = CASESTUDY_CONTENT[id] || CASESTUDY_CONTENT['domain-controller'];
+    const titleEl = document.getElementById('casestudy-title');
+    const descBlock = document.getElementById('casestudy-description-block');
+    const videoEl = document.getElementById('casestudy-video');
+    const stepsEl = document.getElementById('casestudy-steps');
+
+    if (titleEl) titleEl.textContent = data.title;
+    if (descBlock) descBlock.innerHTML = `<p>${data.description}</p>`;
+    if (videoEl) videoEl.src = `https://www.youtube.com/embed/${data.videoId}`;
+    if (stepsEl) {
+      stepsEl.innerHTML = data.steps.map((s) => `<li>${s}</li>`).join('');
+    }
+  }
+
   function handleNavClick(e) {
     const link = e.target.closest('a[data-page]');
     if (!link) return;
@@ -100,6 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
         history.replaceState(null, '', `#os-${id}`);
       } else if (page === 'cs' && id) {
         history.replaceState(null, '', `#cs-${id}`);
+      } else if (page === 'casestudy' && id) {
+        history.replaceState(null, '', `#casestudy-${id}`);
       }
     }
 
@@ -127,6 +146,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hash.startsWith('os-')) {
       const id = hash.replace('os-', '');
       showPage('os', id);
+      return;
+    }
+    if (hash.startsWith('casestudy-')) {
+      const id = hash.replace('casestudy-', '');
+      showPage('casestudy', id);
       return;
     }
     if (hash.startsWith('cs-')) {
